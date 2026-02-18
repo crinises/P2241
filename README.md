@@ -1,1 +1,1 @@
-First test for testing. Using selenium, java, intelijidea
+First automated test using Selenium
