@@ -9,8 +9,8 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>25</maven.compiler.source>
-        <maven.compiler.target>25</maven.compiler.target>
+<!--        <maven.compiler.source>25</maven.compiler.source>-->
+<!--        <maven.compiler.target>25</maven.compiler.target>-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 <dependencies>
@@ -33,5 +33,24 @@
         <version>6.3.2</version>
     </dependency>
 </dependencies>
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.3</version>
+
+
+            </plugin>
+
+            <!-- AspectJ approach is the official recommended way for @Step/@Attachment. :contentReference[oaicite:1]{index=1} -->
+
+            <!-- Allure Maven plugin (generate HTML report) -->
+
+
+        </plugins>
+    </build>
 
 </project>
