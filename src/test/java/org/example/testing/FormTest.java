@@ -60,6 +60,18 @@ public class FormTest {
         formPom.pause(3000);
         String actualName= formPom.getTableData("Student Name");
         Assert.assertEquals(actualName,FIRST_NAME +" "+LAST_NAME);
+        String actualEmail = formPom.getTableData("Student Email");
+        Assert.assertEquals(actualEmail, EMAIL, "Email nu coincide!");
+        String actualGender = formPom.getTableData("Gender");
+        Assert.assertEquals(actualGender, GENDER, "Gender nu coincide!");
+        String actualMobile = formPom.getTableData("Mobile");
+        Assert.assertEquals(actualMobile, NUMBER, "Mobile nu coincide!");
+        String actualSubjects = formPom.getTableData("Subjects");
+        Assert.assertEquals(actualSubjects, SUBJECT, "Subjects nu coincide!");
+        String actualHobbies = formPom.getTableData("Hobbies");
+        Assert.assertEquals(actualHobbies, HOBBY, "Hobbies nu coincide!");
+        String actualStateCity = formPom.getTableData("State and City");
+        Assert.assertEquals(actualStateCity, STATE + " " + CITY, "State and City nu coincide!");
 
 
 
