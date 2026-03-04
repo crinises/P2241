@@ -47,11 +47,19 @@ jobs:
           echo "Video directory contents:"
           ls -lah ./video || echo "Video directory not found"
 
+
+
+
       - name: Show Selenoid logs
         if: always()
         run: |
           echo "Selenoid logs:"
           docker logs demoqa-selenoid-1 | tail -50
+
+      
+
+
+
 
       - name: Uploading report
         if: always()
@@ -60,12 +68,26 @@ jobs:
           name: report
           path: ./target/surefire-reports/html
 
+
+
+
+      - name: Uploading Allure results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results
+          path: ./target/allure-results
+
       - name: Uploading video
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: video
           path: ./video
+
+
+
+
 
       - name: Uploading logs
         if: always()
