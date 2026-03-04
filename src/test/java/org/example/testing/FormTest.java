@@ -37,8 +37,8 @@ public class FormTest {
     @BeforeMethod
     public void BeforeMethod() throws MalformedURLException {
         logger.info("Start before method");
-        driver = Driver.getAutoLocalDriver();
-//        driver = Driver.getRemoteDriver();
+//        driver = Driver.getAutoLocalDriver();
+        driver = Driver.getRemoteDriver();
         driver.manage().window().maximize();
     }
 
